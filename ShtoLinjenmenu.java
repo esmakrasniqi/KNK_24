@@ -34,7 +34,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 
-public class ShtoLinjenmenu extends MainStacioni{
+public class ShtoLinjenmenu extends Application {
 	
 	public static void main(String[] args) {
 		Application.launch(args);
@@ -83,7 +83,7 @@ public class ShtoLinjenmenu extends MainStacioni{
 		buttonspane.getChildren().addAll(shtoLinje) ;
 		buttonspane.setMinHeight(15);
 		buttonspane.setAlignment(Pos.CENTER);
-	
+	       shtoLinje.setStyle("-fx-background-color: green; -fx-text-fill: white;"); 
 		shtoLinje.setOnAction(e->{
 			
 			ShtoLinje();
@@ -99,6 +99,7 @@ public class ShtoLinjenmenu extends MainStacioni{
 	}
 
 	private void ShtoLinje() { 
+		DbConnection.getConnection();
 		try {
 			
 			String query = "INSERT INTO Linjat(Vendi_nisjes,Destinacioni,Oranisjes, OraArritjes,Cmimi,EmriKompanis,Verifikmi) VALUES (?, ?, ? , ?,?, ?,?)";
@@ -119,13 +120,18 @@ public class ShtoLinjenmenu extends MainStacioni{
 				alert.setHeaderText(null);
 				alert.setContentText("Linja u shtua me sukses !");
 				alert.showAndWait();
+			        OranisjesTxt.clear();
+				OraArritjesTxt.clear();
+				CmimiTxt.clear();
+				EmriKompanistxt.clear();
+				verifikimicheck.setSelected(false);
 				
 			
 			} else {
 				Alert alert = new Alert(AlertType.INFORMATION);
 				alert.setTitle("Menaxhimi i Linjave");
 				alert.setHeaderText(null);
-				alert.setContentText("Linja nuk u shtua");
+				alert.setContentText("Linja nuk u shtua,Keni gabime ne shtypje");
 				alert.showAndWait();				
 			}
 			
