@@ -42,9 +42,10 @@ Emri varchar(30) not null ,
 Mbiemri varchar(40) not null ,
 Email varchar(40) not null ,
 Username varchar(40) not null ,
+Gjinia varchar(20),
 Password varchar(40) not null);
 
-insert into Regjistrohu(Emri,Mbiemri,Email,Username,Password) values ('Veton','Shala','vetonnshala@gmail.com','veton','1234');
+
 
 create table Komentet(
 Kid integer primary key auto_increment not null unique ,
