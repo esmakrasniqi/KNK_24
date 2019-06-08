@@ -14,7 +14,6 @@ public class RezervoB extends Application {
     }
 
     final Button button = new Button ("Rezervo-Bileten");
-    final Label notification = new Label ();
     final TextField emri = new TextField("");
     final TextField mbiemri = new TextField("");
     final TextField nrBiletave = new TextField("");
@@ -67,29 +66,50 @@ public class RezervoB extends Application {
                   "Istog",
                   "Fushe Kosove"  
         );   
+       final ComboBox nrBiletaveComboBox = new ComboBox();
+        nrBiletaveComboBox.getItems().addAll(
+        	    "1",
+        	    "2",
+        	    "3",
+        	    "4",
+        	    "5",
+        	    "6"
+        ); 
 
         
 
         
         GridPane grid = new GridPane();
+     
         grid.setVgap(4);
         grid.setHgap(10);
+     
         grid.setPadding(new Insets(5, 5, 5, 5));
         grid.add(new Label("REZERVO"), 2, 0);
+     
         grid.add(new Label("Nga: "), 0, 1);
         grid.add(ngaComboBox, 1, 1);
+     
         grid.add(new Label("Ne: "), 2, 1);
         grid.add(neComboBox, 3, 1);
+     
         grid.add(new Label("Emri: "), 0, 2);
         grid.add(emri, 1, 2, 3, 2);
+     
         grid.add(new Label("Mbiemri: "), 0, 5);
         grid.add(mbiemri, 1, 4, 3, 3); 
+     
         grid.add(new Label("NrBiletave: "), 0, 8);
         grid.add(nrBiletave, 1, 6, 3, 6);
+     
+        grid.add(new Label("NrBiletave: "), 0, 8);
+        grid.add(nrBiletaveComboBox, 1, 6, 3, 6);
+     
         grid.add(new Label("Cmimi: "), 0, 12);
         grid.add(cmimi, 1, 9, 3, 9);
+     
         grid.add(button, 3, 20);
-        grid.add (notification, 8, 20, 5, 20);
+    
        
       
 
