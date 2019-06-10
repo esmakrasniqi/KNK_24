@@ -13,7 +13,7 @@ public class RezervoB extends Application {
         launch(args);
     }
 
-    final Button button = new Button ("Rezervo-Bileten");
+    final Button button = new Button ("");
     final TextField emri = new TextField("");
     final TextField mbiemri = new TextField("");
     final TextField nrBiletave = new TextField("");
@@ -24,7 +24,7 @@ public class RezervoB extends Application {
     
     @Override public void start(Stage stage) {
         stage.setTitle("RezervoBilet");
-        Scene scene = new Scene(new Group(), 500, 400);
+        Scene scene = new Scene(new Group(), 650, 500);
        
 
         
@@ -75,41 +75,55 @@ public class RezervoB extends Application {
         	    "5",
         	    "6"
         ); 
-
+       Button button = new Button("Rezervo Bileten");
+      
+    
+        DatePicker nisja = new DatePicker();
+         DatePicker kthimi = new DatePicker();
+      
         
 
         
         GridPane grid = new GridPane();
-     
-        grid.setVgap(4);
+        grid.setStyle("-fx-background-color:PINK");
+        grid.setVgap(7);
         grid.setHgap(10);
      
-        grid.setPadding(new Insets(5, 5, 5, 5));
-        grid.add(new Label("REZERVO"), 2, 0);
-     
+        grid.setPadding(new Insets(70, 70, 70, 40));
+         grid.add(new Label("REZERVO"), 2, 0);
+        
+        
         grid.add(new Label("Nga: "), 0, 1);
         grid.add(ngaComboBox, 1, 1);
-     
+        
         grid.add(new Label("Ne: "), 2, 1);
         grid.add(neComboBox, 3, 1);
-     
+        
         grid.add(new Label("Emri: "), 0, 2);
-        grid.add(emri, 1, 2, 3, 2);
-     
+        grid.add(emri, 1, 2, 2, 2);
+        
         grid.add(new Label("Mbiemri: "), 0, 5);
-        grid.add(mbiemri, 1, 4, 3, 3); 
-     
-        grid.add(new Label("NrBiletave: "), 0, 8);
-        grid.add(nrBiletave, 1, 6, 3, 6);
-     
+        grid.add(mbiemri, 1, 4, 2, 3); 
+        
         grid.add(new Label("NrBiletave: "), 0, 8);
         grid.add(nrBiletaveComboBox, 1, 6, 3, 6);
-     
+        
         grid.add(new Label("Cmimi: "), 0, 12);
-        grid.add(cmimi, 1, 9, 3, 9);
-     
-        grid.add(button, 3, 20);
-    
+        grid.add(cmimi, 1, 9, 2, 9);
+        
+        grid.add(new Label("Nisja: "), 0, 18);
+        grid.add(nisja, 1, 18);
+        
+        grid.add(new Label("Kthimi: "), 2, 18);
+        grid.add(kthimi, 3, 18);
+
+      
+       
+       
+        grid.add(button, 3, 25);
+        button.setStyle("-fx-background-color:SILVER");
+        
+       
        
       
 
