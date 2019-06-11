@@ -21,8 +21,8 @@ import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-public class ShikoLinjat extends MainStacioni {
-	public  void start(Stage linjat)
+public class ShikoLinjat extends Application {
+	public void start(Stage primaryStage)
 	{
 	   private TextField LidTxt = new TextField();
 	private TextField Vendi_nisjestxt = new TextField();
