@@ -13,11 +13,11 @@ public class RezervoB extends Application {
         launch(args);
     }
 
-    final Button button = new Button ("");
-    final TextField emri = new TextField("");
-    final TextField mbiemri = new TextField("");
-    final TextField nrBiletave = new TextField("");
-    final TextField cmimi = new TextField("");
+     Button button = new Button ("");
+     TextField emri = new TextField("");
+     TextField mbiemri = new TextField("");
+     TextField nrBiletave = new TextField("");
+     TextField cmimi = new TextField("");
 
 
   
@@ -30,7 +30,7 @@ public class RezervoB extends Application {
         
       
         
-        final ComboBox ngaComboBox = new ComboBox();
+        ComboBox ngaComboBox = new ComboBox();
         ngaComboBox.getItems().addAll(
             "Peje",
             "Deqan",
@@ -49,7 +49,7 @@ public class RezervoB extends Application {
         );
      
         
-        final ComboBox neComboBox = new ComboBox();
+        ComboBox neComboBox = new ComboBox();
         neComboBox.getItems().addAll(
         	      "Peje",
                   "Deqan",
@@ -66,7 +66,7 @@ public class RezervoB extends Application {
                   "Istog",
                   "Fushe Kosove"  
         );   
-       final ComboBox nrBiletaveComboBox = new ComboBox();
+        ComboBox nrBiletaveComboBox = new ComboBox();
         nrBiletaveComboBox.getItems().addAll(
         	    "1",
         	    "2",
