@@ -277,17 +277,17 @@ public class frmMain extends Application{
 				
 				if(preparedStatement.executeUpdate() > 0) {
 					if(preparedStatement.executeUpdate() > 0) {
-				Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("Menaxhimi i Linjave");
-				alert.setHeaderText(null);
-				alert.setContentText("Komenti u dergua , Ju faleminderit per sygjerimin!");
-				alert.showAndWait();
+				             Alert alert = new Alert(AlertType.INFORMATION);
+				             alert.setTitle("Menaxhimi i Linjave");
+				             alert.setHeaderText(null);
+				             alert.setContentText("Komenti u dergua , Ju faleminderit per sygjerimin!");
+				               alert.showAndWait();
 				} else {
 					Alert alert = new Alert(AlertType.INFORMATION);
-				alert.setTitle("Menaxhimi i Linjave");
-				alert.setHeaderText(null);
-				alert.setContentText("Diqka nuk eshte ne rregull!");
-				alert.showAndWait();
+				         alert.setTitle("Menaxhimi i Linjave");
+				          alert.setHeaderText(null);
+				          alert.setContentText("Diqka nuk eshte ne rregull!");
+				          alert.showAndWait();
 				}
 				
 				
