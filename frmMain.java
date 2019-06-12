@@ -242,9 +242,19 @@ public class frmMain extends Application{
 				
 				
 				if(preparedStatement.executeUpdate() > 0) {
-					resultLabel.setText("Kerkimi perfundoi");
+						Alert alert = new Alert(AlertType.INFORMATION);
+					alert.setTitle("Menaxhimi i Linjave");
+					alert.setHeaderText(null);
+					alert.setContentText("Kerkimi perfundoi , shiko Linjat per me shume info");
+					alert.showAndWait();
+					
 				} else {
-					resultLabel.setText("Nuk ka te dhena!");
+					Alert alert = new Alert(AlertType.INFORMATION);
+					alert.setTitle("Menaxhimi i Linjave");
+					alert.setHeaderText(null);
+					alert.setContentText(" Na vjen keq ,nuk ka te Linje");
+					alert.showAndWait();
+				}
 				}
 				
 				
@@ -266,9 +276,18 @@ public class frmMain extends Application{
 				
 				
 				if(preparedStatement.executeUpdate() > 0) {
-					resultLabel.setText("Komenti u dergua. Faleminderit per sygjerimin.");
+					if(preparedStatement.executeUpdate() > 0) {
+				Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Menaxhimi i Linjave");
+				alert.setHeaderText(null);
+				alert.setContentText("Komenti u dergua , Ju faleminderit per sygjerimin!");
+				alert.showAndWait();
 				} else {
-					resultLabel.setText("Gabim gjate dergimit!");
+					Alert alert = new Alert(AlertType.INFORMATION);
+				alert.setTitle("Menaxhimi i Linjave");
+				alert.setHeaderText(null);
+				alert.setContentText("Diqka nuk eshte ne rregull!");
+				alert.showAndWait();
 				}
 				
 				
