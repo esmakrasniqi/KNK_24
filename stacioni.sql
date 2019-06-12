@@ -28,16 +28,17 @@ Verifikmi boolean
  insert into Linjat(Vendi_nisjes,Destinacioni,Oranisjes,OraArritjes,Cmimi,EmriKompanis,Verifikmi)
  values('Prishtine','Lipjan','08:00:00','08:30:00',00.50,'Ali',1);                        						
 
-
 create table Biletat (
 Bid integer auto_increment primary key not null unique ,
-Lid integer not null ,
+vendinis varchar(40) ,
+destinacioni varchar(30),
 Bemri varchar(40) not null ,
 Bmbiemri varchar(40) not null ,
-B_ora time not null ,
 NrBiletav integer not null ,
-Kthyese boolean,
-foreign key(Lid) references Linjat(Lid) on delete cascade);
+Cmimi float not null,
+Nisja varchar(40) not null ,
+Kthimi varchar(40) not null ,
+lloji varchar(30) );
                    						
 create table Regjistrohu(
 User_id integer primary key  auto_increment not null ,
