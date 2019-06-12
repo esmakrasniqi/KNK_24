@@ -99,14 +99,14 @@ public class frmMain extends Application{
 		        aboutMenu.getItems().add(aboutHelpItem); 
 		        
 		        aboutHelpItem.setOnAction(e -> {
-		    //   	About.start(Mainstage);
+		        	About.about();
 		        });
 		        
 		        
 		        
 
 
-		      Image openIcon = new Image(getClass().getResourceAsStream("1.png"));
+		      Image openIcon = new Image(getClass().getResourceAsStream("foto/1.png"));
 		      ImageView exitview = new ImageView(openIcon);
 		      exitview.setFitWidth(15);
 		      exitview.setFitHeight(15);
@@ -124,12 +124,12 @@ public class frmMain extends Application{
 		        // Krijo MenuItems
 		        MenuItem aItem = new MenuItem("Shqip");
 		        MenuItem eItem = new MenuItem("Anglisht");
-		        Image alIcon = new Image(getClass().getResourceAsStream("ALFlag.png"));
+		        Image alIcon = new Image(getClass().getResourceAsStream("foto/ALFlag.png"));
 			      ImageView alview = new ImageView(alIcon);
 			      alview.setFitWidth(20);
 			     alview.setFitHeight(20);
 			      aItem.setGraphic(alview);
-			      Image eIcon = new Image(getClass().getResourceAsStream("UKFlag.png"));
+			      Image eIcon = new Image(getClass().getResourceAsStream("foto/UKFlag.png"));
 			      ImageView eview = new ImageView(eIcon);
 			      eview.setFitWidth(20);
 			     eview.setFitHeight(20);
@@ -150,7 +150,7 @@ public class frmMain extends Application{
 	        GridPane pane = new GridPane();
 		    Button Kerko = new Button("Kerko");
 		// Kerko.setStyle("-fx-background-color: grey; -fx-text-fill: white;"); 
-		     Image sIcon = new Image(getClass().getResourceAsStream("search.png"));
+		     Image sIcon = new Image(getClass().getResourceAsStream("foto/search.png"));
 		      ImageView sview = new ImageView(sIcon);
 		      sview.setFitWidth(20);
 		     sview.setFitHeight(20);
