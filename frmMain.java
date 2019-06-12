@@ -101,8 +101,13 @@ public class frmMain extends Application{
 		        aboutHelpItem.setOnAction(e -> {
 		        	About.about();
 		        });
+		        MenuItem manItem = new MenuItem("Manuali i perdorimit"); 
+		        aboutMenu.getItems().add(manItem); 
 		        
-		        
+		       manItem.setOnAction(e -> {
+		        	Help.help();
+		        });
+	    
 		        
 
 
