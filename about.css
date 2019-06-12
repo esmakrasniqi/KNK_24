@@ -1,0 +1,16 @@
+td {
+	padding:25px;
+}
+
+h2 {
+	text-align: center;
+}
+
+#contact {
+	height: 650px;
+	clear: both;
+
+}
+.member_picture {
+	border-radius: 50%;
+}
